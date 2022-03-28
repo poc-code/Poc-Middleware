@@ -31,4 +31,6 @@ app.UseExceptionHandler(new ExceptionHandlerOptions
     ExceptionHandler = new ErrorHandlerMiddleware(app.Environment).Invoke
 });
 
+app.UseCheckApiKeyHeaderMiddleware();
+
 app.Run();
